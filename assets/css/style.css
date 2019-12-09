@@ -1,0 +1,78 @@
+body {
+  min-height: 100vh;
+}
+.label {
+  font-size: 18px;
+}
+.row {
+  width: 100%;
+}
+.row.footer {
+  position: fixed;
+  bottom: 0px;
+}
+.container-fluid {
+  width: 70%;
+  margin: 10px auto;
+
+}
+footer {
+  padding-left: 10px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.container-fluid header, footer {
+  color: white;
+  min-height: 40px;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: #00a3e7;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.bootstrap-tagsinput {
+  min-width: 100%;
+  padding: 15px 5px !important;
+}
+.swal2-actions button {
+  display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 2;
+    margin-right: 5px;
+    border-radius: .25rem;
+    min-width: 150px;
+    letter-spacing: 2px;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    cursor:pointer;
+}
+.swal2-cancel.button_left.large:hover {
+  color: #ef7f1a;
+}
+.swal2-confirm.button_right.large:hover {
+  color: #676766;
+}
+.swal2-cancel.button_left.large {
+  color: #fff;
+  border:none;
+  font-size: 18px;
+  background-color: #676766;
+
+}
+.swal2-confirm.button_right.large {
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  background-color: #00a3e7;
+}
