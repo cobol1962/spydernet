@@ -4,13 +4,15 @@
   <title>Spyder Net</title>
   <meta charset="utf-8" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="/assets/js/mainScript.js"></script>
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="stylesheet" href="/assets/css/bootstrap-tagsinput.css">
   <link rel="stylesheet" href="/assets/css/sweetalert2.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
 </head>
 <body>
 
@@ -20,32 +22,57 @@
           <header>Spyder Net</header>
       </div>
     </div>
-    <div class="row" style="margin-top: 30px;">
-      <div class="col-xs-12 col-md-12">
-        <form id="link">
-          <div class="form-group">
-            <label for="url">Enter url for article</label>
-            <input class="form-control" type="text" id="url" name="url" />
-          </div>
-          <div class="form-group">
-            <label for="tags">Enter tags for this article (enter term, press enter no limit in mumber of tags)</label>
-            <select multiple data-role="tagsinput"  id="tags">
-          </select>
-        </form>
-        <button onclick="$('#link').submit();return false;" style="margin-top:10px;float: right;" type="button"   class="btn btn-primary">Get Article</button>
+    <ul class="nav nav-pills mb-4" id="steps_tab" role="tablist" >
+      <li class="nav-link active">
+        <a  id="step1_tab" data-toggle="pill" href="#step1" role="tab" aria-controls="step1" aria-selected="true">Tags</a>
+      </li>
+      <li >
+        <a  id="step2_tab" data-toggle="pill" href="#step2" role="tab" aria-controls="step2" aria-selected="false">Aquire</a>
+      </li>
+      <li >
+        <a  id="step3_tab" data-toggle="pill" href="#step3" role="tab" aria-controls="step3" aria-selected="false">Search</a>
+      </li>
+
+    </ul>
+      <div id="step1" class="tab-pane fade show active" style="padding-top: 20px;">
+        <div id="tags_jstree">
+
+        </div>
       </div>
+      <div id="step2" class="tab-pane fade" style="padding: 0;">
+          <div class="row" style="margin-top: 30px;">
+            <div class="col-xs-12 col-md-12">
+              <form id="link">
+                <div class="form-group">
+                  <label for="url">Enter url for article</label>
+                  <input class="form-control" type="text" id="url" name="url" />
+                </div>
+                <div class="form-group">
+                  <label for="tags">Enter tags for this article (enter term, press enter no limit in number of tags)</label>
+                  <select multiple data-role="tagsinput"  id="tags">
+                </select>
+              </form>
+              <button onclick="$('#link').submit();return false;" frameborder="0" style="margin-top:10px;float: right;" type="button"   class="btn btn-primary">Get Article</button>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 30px;">
+          <div class="col-xs-12 col-md-12">
+            <iframe src="" id="text_received" onload="frameLoaded(this);" style="min-width: 100%;overflow: hidden;border: none;height: 0px;"></iframe>
+          </div>
+        </div>
     </div>
-  </div>
-  <div class="row" style="margin-top: 30px;">
-    <div class="col-xs-12 col-md-12" id="text_received">
+    <div id="step3" class="tab-pane fade" style="padding: 0;">
+      dffdfsdfdfd
     </div>
-  </div>
+
 </div>
 </body>
  <script type="text/javascript" src="/assets/js/api.js"></script>
  <script type="text/javascript" src="/assets/js/bootstrap-tagsinput.js"></script>
  <script type="text/javascript" src="/assets/js/jquery.validate.js"></script>
- <script type="text/javascript" src="/assets/js/mainScript.js"></script>
  <script type="text/javascript" src="/assets/js/sweetalert2.js"></script>
- <script type="text/javascript" src="/assets/js/jquery.highlight.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
+ <script src="/assets/js/jquery.highlight.js"></script>
+
 </html>
